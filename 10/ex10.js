@@ -12,3 +12,10 @@ function kadai2(){
 function kadai3(){
     alert(fruit[1]);
 }
+
+let kara =[];
+
+function kadai4(){
+    kara.push('hoge','fuga','piyo');
+    alert(kara);
+}
