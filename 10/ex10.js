@@ -9,3 +9,6 @@ function kadai2(){
     alert(fruit);
 }
 
+function kadai3(){
+    alert(fruit[2]);
+}
