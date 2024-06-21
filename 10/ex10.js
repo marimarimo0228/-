@@ -10,5 +10,5 @@ function kadai2(){
 }
 
 function kadai3(){
-    alert(fruit[1]);
+    alert(fruit[3]);
 }
