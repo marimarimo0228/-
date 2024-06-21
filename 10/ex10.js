@@ -1,4 +1,11 @@
-function kadai1 (){
-    let fruit =['apple','strawberry','banana','melon','qui']
+let fruit =['apple','strawberry','banana','melon','qui']
+
+function kadai1(){
     alert(fruit);
 }
+
+function kadai2(){
+    fruit.push('peach');
+    alert(fruit);
+}
+
