@@ -21,7 +21,7 @@ function showMap(){
 let ido = document.getElementById("ido").value;
 let keido = document.getElementById("keido").value;
 let syuku = document.getElementById("syuku").value;
-
+let map = L.map('map').setView([ido,keido],syuku)
 // コールバック関数の定義
 function click_callback(e) {
     //緯度と経度を表示
