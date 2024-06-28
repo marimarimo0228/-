@@ -21,13 +21,13 @@ function showMap(){
 let ido = document.getElementById("ido").value;
 let keido = document.getElementById("keido").value;
 let syuku = document.getElementById("syuku").value;
-let map = L.map('map').setView([ido,keido],syuku)
+let map = L.map('map').setView([ido,keido],syuku);
 // コールバック関数の定義
 function click_callback(e) {
     //緯度と経度を表示
     alert(e.latlng);
     map.setView(e.latlng, syuku);
-    L.marker(e.latling).bindPopup(String(n)).addTo(map);
+    L.marker(e.latlng).bindPopup(String(n)).addTo(map);
     n = n + 1;
 }
  
