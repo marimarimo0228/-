@@ -12,15 +12,24 @@
 <!--表示ボタン-->
 <input type='button' value='地図を表示' onclick='showMap();'><br>
 
+<input type="number" id="ido">
+<input type="number" id="keido">
+<input type="number" id="syuku">
+
 <script>
 function showMap(){
-// "map" divに地図を作成し、指定した場所と縮尺で表示する
-let map = L.map('map').setView([35.561996353785, 139.57430091562], 15);
+let ido = document.getElementById("ido").value;
+let keido = document.getElementById("keido").value;
+let syuku = document.getElementById("syuku").value;
+}
 
 // コールバック関数の定義
 function click_callback(e) {
     //緯度と経度を表示
     alert(e.latlng);
+    map.setView(e.latlng, syuku);
+    L.marker(e.latling).bindPopup(String(n)).addTo(map);
+    n = n + 1;
 }
  
 // 地図がクリックされたらclick_callback()関数を呼ぶ
