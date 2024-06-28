@@ -17,6 +17,7 @@
 <input type="number" id="syuku">
 
 <script>
+let n = 1
 function showMap(){
 let ido = document.getElementById("ido").value;
 let keido = document.getElementById("keido").value;
@@ -27,8 +28,8 @@ function click_callback(e) {
     //緯度と経度を表示
     alert(e.latlng);
     map.setView(e.latlng, syuku);
-    n = n + 1
     L.marker(e.latlng).bindPopup(String(n)).addTo(map);
+    n = n + 1;
 }
  
 // 地図がクリックされたらclick_callback()関数を呼ぶ
