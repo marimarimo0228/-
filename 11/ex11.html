@@ -23,6 +23,7 @@ let keido = document.getElementById("keido").value;
 let syuku = document.getElementById("syuku").value;
 let map = L.map('map').setView([ido,keido],syuku);
 // コールバック関数の定義
+let n = 1;
 function click_callback(e) {
     //緯度と経度を表示
     alert(e.latlng);
