@@ -22,7 +22,7 @@ function showMap(){
 let Ido = document.getElementById('lat').value;
 let Keido = document.getElementById('lng').value;
 let Syukusyaku = document.getElementById('zom').value;
-se
+}
 function click_callback(e) {
 	//緯度と経度を表示
     alert(e.latlng);
@@ -35,7 +35,7 @@ function click_callback(e) {
 map.on('click', click_callback);
 
 // OpenStreetMapタイルレイヤーを追加する
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'), {
     attribution: 'Map data &copy; <a href="https://www.ob
 }
 </script>
