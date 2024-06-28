@@ -27,9 +27,8 @@ function click_callback(e) {
     //緯度と経度を表示
     alert(e.latlng);
     map.setView(e.latlng, syuku);
-    n = 1
-    L.marker(e.latlng).bindPopup(String(n)).addTo(map);
     n = n + 1
+    L.marker(e.latlng).bindPopup(String(n)).addTo(map);
 }
  
 // 地図がクリックされたらclick_callback()関数を呼ぶ
