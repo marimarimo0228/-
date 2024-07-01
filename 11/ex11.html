@@ -23,6 +23,7 @@ let ido = document.getElementById("ido").value;
 let keido = document.getElementById("keido").value;
 let syuku = document.getElementById("syuku").value;
 
+//縮尺率が1未満のときは1、20より大きいときは20に変換する
 if (syuku < 1){
     syuku = 1;
 }else if (syuku > 20){
@@ -31,13 +32,13 @@ if (syuku < 1){
 
 let map = L.map('map').setView([ido,keido],syuku);
 // コールバック関数の定義
-let n = 1;
+let n = 1;//ピン番号用の変数
 function click_callback(e) {
     //緯度と経度を表示
     alert(e.latlng);
-    map.setView(e.latlng, syuku);
-    L.marker(e.latlng).bindPopup(String(n)).addTo(map);
-    n = n + 1;
+    map.setView(e.latlng, syuku);//クリックされた場所を中心として再描画（縮尺率は同じ）
+    L.marker(e.latlng).bindPopup(String(n)).addTo(map);//クリックされるとピンを作成（番号は1から順に設定）
+    n = n + 1;//ピン番号用の関数
 }
  
 // 地図がクリックされたらclick_callback()関数を呼ぶ
